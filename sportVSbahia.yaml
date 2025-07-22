@@ -1,0 +1,576 @@
+"1987":
+    Sport:
+        Estadual: 1              # Vice
+        Regional: null
+        Brasileirão: 10          # Campeão
+        Copa_Brasil: null
+        Sul-Americana: null
+        Libertadores: null
+    Bahia:
+        Estadual: 3              # Campeão
+        Regional: null
+        Brasileirão: 2           # Participou (11°)
+        Copa_Brasil: null
+        Sul-Americana: null
+        Libertadores: null
+
+"1988":
+    Sport:
+        Estadual: 3              # Campeão
+        Regional: null
+        Brasileirão: 5           # Quartas de final (top 8)
+        Copa_Brasil: null
+        Sul-Americana: null
+        Libertadores: 2          # Participou (Fase de grupos)
+    Bahia:
+        Estadual: 3              # Campeão
+        Regional: null
+        Brasileirão: 10          # Campeão
+        Copa_Brasil: null
+        Sul-Americana: null
+        Libertadores: null
+
+"1989":
+    Sport:
+        Estadual: 0
+        Regional: null
+        Brasileirão: -4          # Rebaixado
+        Copa_Brasil: 8           # Vice (roubo)
+        Sul-Americana: null
+        Libertadores: null
+    Bahia:
+        Estadual: 1              # Vice
+        Regional: 0              # N/A +0
+        Brasileirão: 2           # Escapou em 2° na repescagem do rebaixamento
+        Copa_Brasil: 0           # Quartas
+        Sul-Americana: null
+        Libertadores: 6          # Quartas
+
+"1990":
+    Sport:
+        Estadual: 1              # Vice
+        Regional: null
+        Brasileirão: 5           # Campeão Série B
+        Copa_Brasil: null        # Não jogou 
+        Sul-Americana: null
+        Libertadores: null
+    Bahia:
+        Estadual: 0           
+        Regional: null
+        Brasileirão: 6          # Semi-Final
+        Copa_Brasil: 1          # Quartas
+        Sul-Americana: null
+        Libertadores: null
+    
+"1991":
+    Sport:
+        Estadual: 3             # Campeão
+        Regional: null
+        Brasileirão: 2          # 18° Lugar
+        Copa_Brasil: 1          # Caiu nas oitavas (mais longe)
+        Sul-Americana: null
+        Libertadores: null
+    Bahia:
+        Estadual: 3
+        Regional: null
+        Brasileirão: 3          # 13° +1 por melhor campanha proxima
+        Copa_Brasil: null
+        Sul-Americana: null
+        Libertadores: null
+
+"1992":
+    Sport:
+        Estadual: 3
+        Regional: null
+        Brasileirão: 3          # 12° +1 por melhor camapanha proxima
+        Copa_Brasil: 6          # Semi-Final
+        Sul-Americana: null
+        Libertadores: null
+    Bahia:
+        Estadual: 1
+        Regional: null
+        Brasileirão: 2          # 18° lugar
+        Copa_Brasil: 0          # Oitavas
+        Sul-Americana: null
+        Libertadores: null
+
+"1993":
+    Sport:
+        Estadual: 0
+        Regional: null
+        Brasileirão: 3          # 25° lugar (+1 por melhor campanha próxima)
+        Copa_Brasil: 1          # Oitavas (mais longe)
+        Sul-Americana: null
+        Libertadores: null
+    Bahia:
+        Estadual: 3
+        Regional: null
+        Brasileirão: 2          # 30° lugar
+        Copa_Brasil: null
+        Sul-Americana: null
+        Libertadores: null
+
+"1994":
+    Sport:
+        Estadual: 3
+        Regional: 4             # Campeão
+        Brasileirão: 2          # 13° lugar
+        Copa_Brasil: null
+        Sul-Americana: null
+        Libertadores: null
+    Bahia:
+        Estadual: 3
+        Regional: 2             # Terceiro lugar
+        Brasileirão: 5          # Quartas
+        Copa_Brasil: 1          # Oitavas (mais longe)
+        Sul-Americana: null
+        Libertadores: null
+
+"1995":
+    Sport:
+        Estadual: 0
+        Regional: null
+        Brasileirão: 2          # 19° lugar
+        Copa_Brasil: 0          # Primeira fase
+        Sul-Americana: null
+        Libertadores: null
+    Bahia:
+        Estadual: 0
+        Regional: null
+        Brasileirão: 3          # 18° lugar (+1 Melhor campanha)
+        Copa_Brasil: 1          # Oitavas (mais longe)
+        Sul-Americana: null
+        Libertadores: null
+
+"1996":
+    Sport:
+        Estadual: 3
+        Regional: null
+        Brasileirão: 5          # 10° lugar
+        Copa_Brasil: null
+        Sul-Americana: null
+        Libertadores: null
+    Bahia:
+        Estadual: 1
+        Regional: null
+        Brasileirão: 2          # 22° lugar
+        Copa_Brasil: 1          # Segunda fase (mais longe)
+        Sul-Americana: null
+        Libertadores: null
+
+"1997":
+    Sport:
+        Estadual: 3
+        Regional: 2             # 4° lugar
+        Brasileirão: 4          # 11° lugar (+2 Campanha muito superior)
+        Copa_Brasil: 0          # Primeira fase
+        Sul-Americana: null
+        Libertadores: null
+    Bahia:
+        Estadual: 1
+        Regional: 3             # Vice
+        Brasileirão: -4         # Rebaixado
+        Copa_Brasil: 0          # Primeira fase
+        Sul-Americana: null
+        Libertadores: null
+
+"1998":
+    Sport:
+        Estadual: 3
+        Regional: 0
+        Brasileirão: 5          # Quartas
+        Copa_Brasil: 1          # Quartas (+1)
+        Sul-Americana: null
+        Libertadores: null
+    Bahia:
+        Estadual: 3
+        Regional: 2             # 3° lugar   
+        Brasileirão: 0          # 18° lugar da série B 😂
+        Copa_Brasil: 0          # Oitavas
+        Sul-Americana: null
+        Libertadores: null
+
+"1999":
+    Sport:
+        Estadual: 3
+        Regional: 2             # Terceiro lugar
+        Brasileirão: 2          # 22° lugar
+        Copa_Brasil: 0          # Segunda fase
+        Sul-Americana: null
+        Libertadores: null
+    Bahia:
+        Estadual: 3
+        Regional: 3             # Vice
+        Brasileirão: 0          # 3° lugar no quadrangular final
+        Copa_Brasil: 1          # Quartas (+1)
+        Sul-Americana: null
+        Libertadores: null
+
+"2000":
+    Sport:
+        Estadual: 3
+        Regional: 4             # Campeão
+        Brasileirão: 5          # Quartas (roubo)
+        Copa_Brasil: 0          # Primeira fase
+        Sul-Americana: null
+        Libertadores: null
+        Copa dos Campeões: 5    # Vice (valia vaga para libertadores)
+    Bahia:
+        Estadual: 1
+        Regional: 0
+        Brasileirão: 2          # Oitavas
+        Copa_Brasil: 1          # Quartas
+        Sul-Americana: null
+        Libertadores: null
+
+"2001":
+    Sport:
+        Estadual: 0
+        Regional: 3             # Vice
+        Brasileirão: -4         # Rebaixado
+        Copa_Brasil: 0          # Segunda fase
+        Sul-Americana: null
+        Libertadores: null
+    Bahia:
+        Estadual: 3
+        Regional: 4             # Campeão
+        Brasileirão: 5          # 8° lugar
+        Copa_Brasil: 1          # Oitavas (foi mais longe)
+        Sul-Americana: null
+        Libertadores: null
+
+"2002":
+    Sport:
+        Estadual: 0
+        Regional: 0
+        Brasileirão: 0          # 5° lugar da série B
+        Copa_Brasil: 0          # Segunda fase
+        Sul-Americana: null
+        Libertadores: null
+    Bahia:
+        Estadual: 0
+        Regional: 4             # Campeão
+        Brasileirão: 2          # 19° lugar
+        Copa_Brasil: 1          # Oitavas (mais longe)
+        Sul-Americana: null
+        Libertadores: null
+
+"2003":
+    Sport:
+        Estadual: 3
+        Regional: 0
+        Brasileirão: 0          # pipocou no quadrangular final e não subiu
+        Copa_Brasil: 6          # Semi-Final
+        Sul-Americana: null
+        Libertadores: null
+    Bahia:
+        Estadual: 0
+        Regional: 0
+        Brasileirão: -4         # Rebaixado
+        Copa_Brasil: 0          # Oitavas
+        Sul-Americana: null
+        Libertadores: null
+
+"2004":
+    Sport:
+        Estadual: 0
+        Regional: null
+        Brasileirão: 0          # 17° da Série B
+        Copa_Brasil: 1          # Segunda fase
+        Sul-Americana: null
+        Libertadores: null
+    Bahia:
+        Estadual: 1
+        Regional: null
+        Brasileirão: 2          # Não subiu no quadrangular final (+2 por campanha muito superior)
+        Copa_Brasil: null
+        Sul-Americana: null
+        Libertadores: null
+
+"2005":
+    Sport:
+        Estadual: 0
+        Regional: null
+        Brasileirão: 1          # 16° (+1 camapanha superior, mas próxima)
+        Copa_Brasil: null
+        Sul-Americana: null
+        Libertadores: null
+    Bahia:
+        Estadual: 1
+        Regional: null
+        Brasileirão: -6         # Rebaixado pra Série C 😂
+        Copa_Brasil: 1          # Primeira fase
+        Sul-Americana: null
+        Libertadores: null
+
+"2006":
+    Sport:
+        Estadual: 3
+        Regional: null
+        Brasileirão: 4          # Subiu pra A
+        Copa_Brasil: null
+        Sul-Americana: null
+        Libertadores: null
+    Bahia:
+        Estadual: 0
+        Regional: null
+        Brasileirão: 0          # Não subiu pra B 😂😂
+        Copa_Brasil: 1          # Primeira fase
+        Sul-Americana: null
+        Libertadores: null
+
+"2007":
+    Sport:
+        Estadual: 3
+        Regional: null
+        Brasileirão: 2          # 14° lugar
+        Copa_Brasil: 0          # Oitavas
+        Sul-Americana: null
+        Libertadores: null
+    Bahia:
+        Estadual: 3
+        Regional: null
+        Brasileirão: 2          # Vice da Série C 😯👏👏
+        Copa_Brasil: 0          # Oitavas
+        Sul-Americana: null
+        Libertadores: null
+
+"2008":
+    Sport:
+        Estadual: 3
+        Regional: null
+        Brasileirão: 2          # 11° lugar
+        Copa_Brasil: 10         # Campeão
+        Sul-Americana: null
+        Libertadores: null
+    Bahia:
+        Estadual: 1
+        Regional: null
+        Brasileirão: 0          # 10° lugar da Série B
+        Copa_Brasil: 0          # Primeira fase
+        Sul-Americana: null
+        Libertadores: null
+
+"2009":
+    Sport:
+        Estadual: 3
+        Regional: null
+        Brasileirão: -4         # Rebaixado
+        Copa_Brasil: null
+        Sul-Americana: null
+        Libertadores: 5         # Oitavas
+    Bahia:
+        Estadual: 1
+        Regional: null
+        Brasileirão: 0          # 12° da Série B
+        Copa_Brasil: 0          # Segunda fase (Como não foi demerito do Sport não participar, o Bahia não ganha ponto bônus)
+        Sul-Americana: null
+        Libertadores: null
+
+"2010":
+    Sport:
+        Estadual: 3
+        Regional: null
+        Brasileirão: 0          # 6° lugar da B
+        Copa_Brasil: 1          # Oitavas
+        Sul-Americana: null
+        Libertadores: null
+    Bahia:
+        Estadual: 1
+        Regional: null
+        Brasileirão: 4          # Promovido pra Série A
+        Copa_Brasil: 0          # Segunda fase 
+        Sul-Americana: null
+        Libertadores: null
+
+"2011":
+    Sport:
+        Estadual: 1             # Assalto
+        Regional: null
+        Brasileirão: 4          # Promovido
+        Copa_Brasil: 0          # Primeira fase
+        Sul-Americana: null
+        Libertadores: null
+    Bahia:
+        Estadual: 0
+        Regional: null
+        Brasileirão: 2          # 14° lugar
+        Copa_Brasil: 1          # Oitavas
+        Sul-Americana: null
+        Libertadores: null
+
+"2012":
+    Sport:
+        Estadual: 1
+        Regional: null
+        Brasileirão: -4         # Rebaixado
+        Copa_Brasil: null
+        Sul-Americana: null
+        Libertadores: null
+    Bahia:
+        Estadual: 3
+        Regional: null
+        Brasileirão: 3          # 15° lugar (+1)
+        Copa_Brasil: null
+        Sul-Americana: 1        # Segunda fase
+        Libertadores: null
+
+"2013":
+    Sport:
+        Estadual: 1             # Tri-Vice pro Santa
+        Regional: 0
+        Brasileirão: 4          # Promovido
+        Copa_Brasil: 0          # Segunda fase
+        Sul-Americana: 2        # Oitavas
+        Libertadores: null
+    Bahia:
+        Estadual: 1             # Levou 7 do rival na final
+        Regional: 0
+        Brasileirão: 2          # 12º lugar
+        Copa_Brasil: 0          # Segunda fase
+        Sul-Americana: 2        # Oitavas
+        Libertadores: null
+
+"2014":
+    Sport:
+        Estadual: 3         
+        Regional: 4             # Campeão
+        Brasileirão: 4          # 11º (+2)
+        Copa_Brasil: 0          # Segunda fase
+        Sul-Americana: 1        # Segunda fase
+        Libertadores: null
+    Bahia:
+        Estadual: 3
+        Regional: 0
+        Brasileirão: -4         # Rebaixado
+        Copa_Brasil: 1          # Terceira fase
+        Sul-Americana: 2        # Oitavas
+        Libertadores: null
+
+"2015":
+    Sport:
+        Estadual: 0         
+        Regional: 2             # Semi-Final
+        Brasileirão: 5          # 6º lugar
+        Copa_Brasil: 0          # Terceira fase
+        Sul-Americana: 2        # Oitavas
+        Libertadores: null
+    Bahia:
+        Estadual: 3
+        Regional: 3             # Vice
+        Brasileirão: 0          # 9º lugar da série B
+        Copa_Brasil: 0          # Terceira fase
+        Sul-Americana: 1        # 4x1 na Ilha pra toda américa ver
+        Libertadores: null
+
+"2016":
+    Sport:
+        Estadual: 1             # Assalto         
+        Regional: 2             # Semi-Final
+        Brasileirão: 2          # 14º lugar
+        Copa_Brasil: 0          # Primeira fase
+        Sul-Americana: 1        # Eliminado pelo Sarna Cui
+        Libertadores: null
+    Bahia:
+        Estadual: 1
+        Regional: 2             # Semi-Final
+        Brasileirão: 4          # Promovido
+        Copa_Brasil: 1          # Segunda fase
+        Sul-Americana: null
+        Libertadores: null
+
+"2017":
+    Sport:
+        Estadual: 3        
+        Regional: 3             # Vice
+        Brasileirão: 2          # 15º lugar
+        Copa_Brasil: 1          # Oitavas
+        Sul-Americana: 3        # Quartas
+        Libertadores: null
+    Bahia:
+        Estadual: 1
+        Regional: 4             # Campeão
+        Brasileirão: 3          # 12º lugar
+        Copa_Brasil: 0          # Segunda fase
+        Sul-Americana: null
+        Libertadores: null
+
+"2018":
+    Sport:
+        Estadual: 0        
+        Regional: null          # Começo do fim do Sport. O presidente do Sport removeu o time da competição por "apertar demais" o calendário.
+        Brasileirão: -4         # Rebaixado
+        Copa_Brasil: 0          # Segunda fase
+        Sul-Americana: null
+        Libertadores: null
+    Bahia:
+        Estadual: 3
+        Regional: 3             # Vice
+        Brasileirão: 4          # 11º lugar (+2)
+        Copa_Brasil: 1          # Quartas
+        Sul-Americana: 3        # Quartas
+        Libertadores: null
+
+"2019":
+    Sport:
+        Estadual: 3       
+        Regional: null
+        Brasileirão: 4          # Promovido
+        Copa_Brasil: 0          # Primeira fase
+        Sul-Americana: null
+        Libertadores: null
+    Bahia:
+        Estadual: 3
+        Regional: 0
+        Brasileirão: 2          # 11º lugar
+        Copa_Brasil: 1          # Quartas
+        Sul-Americana: 1        # Primeira fase
+        Libertadores: null
+
+"2020":
+    Sport:
+        Estadual: 0       
+        Regional: 0
+        Brasileirão: 2          # 15° lugar
+        Copa_Brasil: 0          # Primeira fase
+        Sul-Americana: null
+        Libertadores: null
+    Bahia:
+        Estadual: 3
+        Regional: 3             # Vice
+        Brasileirão: 3          # 14º lugar
+        Copa_Brasil: 0          # Primeira fase
+        Sul-Americana: 1        # Primeira fase
+        Libertadores: null
+
+"2021":
+    Sport:
+        Estadual: 1       
+        Regional: 0
+        Brasileirão: -4         # Rebaixado
+        Copa_Brasil: 0          # Primeira fase
+        Sul-Americana: null
+        Libertadores: null
+    Bahia:
+        Estadual: 3
+        Regional: 4             # Jahia passa o Sport pela primeira vez
+        Brasileirão: -4         # Rebaixado
+        Copa_Brasil: 1          # Oitavas
+        Sul-Americana: 1        # Fase grupos
+        Libertadores: null
+
+"2022":
+    Sport:
+        Estadual: 3       
+        Regional: 3             # O maior roubo da região
+        Brasileirão: 0          # 7º lugar da série B
+        Copa_Brasil: 0          # Primeira fase
+        Sul-Americana: null
+        Libertadores: null
+    Bahia:
+        Estadual: 3
+        Regional: 4             # Jahia passa o Sport pela primeira vez
+        Brasileirão: 4          # Promovido
+        Copa_Brasil: 1          # Oitavas
+        Sul-Americana: null
+        Libertadores: null
