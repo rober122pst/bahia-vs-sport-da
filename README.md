@@ -87,6 +87,13 @@ A pontuação atribuída a cada clube em cada ano seguiu a seguinte lógica:
   * matplotlib / seaborn (para gráficos)
   * jGoogle Colab (ou jupyter)
 
+## Fontes de Dados
+
+As informações sobre os desempenhos dos clubes foram obtidas a partir das seguintes fontes:
+* [ogol.com.br](https://www.ogol.com.br/)
+* [ge.globo.com](https://www.ge.globo.com/)
+* [pt.wikipedia.org](https://www.pt.wikipedia.org)
+
 ## Observações Finais
 
 Este projeto é uma análise quantitativa com base em critérios definidos previamente. Apesar de haver um certo grau de subjetividade na escolha dos pesos de pontuação, o objetivo é fomentar uma discussão saudável e divertida sobre dois dos maiores clubes do Nordeste.
