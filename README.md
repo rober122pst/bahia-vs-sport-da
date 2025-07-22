@@ -96,4 +96,4 @@ As informações sobre os desempenhos dos clubes foram obtidas a partir das segu
 
 ## Observações Finais
 
-Este projeto é uma análise quantitativa com base em critérios definidos previamente. Apesar de haver um certo grau de subjetividade na escolha dos pesos de pontuação, o objetivo é fomentar uma discussão saudável e divertida sobre dois dos maiores clubes do Nordeste.
+Este projeto é uma análise quantitativa com base em critérios definidos previamente. Apesar de haver um certo grau de subjetividade na escolha dos pesos de pontuação, o objetivo é fomentar uma discussão saudável e divertida sobre os maiores clubes do Nordeste. Dito isso, Sport Recife maior clube do nordeste.
