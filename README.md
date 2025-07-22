@@ -91,8 +91,8 @@ A pontuação atribuída a cada clube em cada ano seguiu a seguinte lógica:
 
 As informações sobre os desempenhos dos clubes foram obtidas a partir das seguintes fontes:
 * [ogol.com.br](https://www.ogol.com.br/)
-* [ge.globo.com](https://www.ge.globo.com/)
-* [pt.wikipedia.org](https://www.pt.wikipedia.org)
+* [ge.globo.com](https://ge.globo.com/)
+* [pt.wikipedia.org](https://pt.wikipedia.org/wiki/Wikip%C3%A9dia:P%C3%A1gina_principal)
 
 ## Observações Finais
 
