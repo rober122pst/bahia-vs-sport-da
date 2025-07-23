@@ -1,0 +1,200 @@
+:root {
+    --dark-bg: #121212;
+    --card-bg: #1e1e1e;
+    --text-primary: #e0e0e0;
+    --text-secondary: #b3b3b3;
+    --border-color: #2c2c2c;
+    --sport-red: #d82128;
+    --bahia-blue: #0074d9;
+    --white: #ffffff;
+    --success: #28a745;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-primary);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+header h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+header h1 .vs {
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    font-weight: 300;
+    color: var(--text-secondary);
+    margin: 0 0.5rem;
+}
+
+main {
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* Card Styling */
+.card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 25px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+    font-weight: 400;
+}
+
+/* Filters */
+#competition-filters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.filter-item {
+    display: flex;
+    align-items: center;
+    background-color: #2a2a2a;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filter-item:hover {
+    background-color: #333;
+}
+
+.filter-item input[type="checkbox"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+.filter-item input[type="checkbox"]:checked {
+    accent-color: var(--sport-red);
+}
+
+#toggle-all {
+    background-color: var(--sport-red);
+    color: var(--white);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+#toggle-all:hover {
+    background-color: #b01a20;
+    transform: scale(1.05);
+}
+
+/* Chart */
+.chart-container {
+    position: relative;
+    height: 400px;
+}
+
+/* Tables */
+.table-container {
+    overflow-x: auto;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+th {
+    background-color: #2a2a2a;
+    font-weight: bold;
+}
+tbody tr:hover {
+    background-color: #252525;
+}
+.winner-sport { color: var(--sport-red); font-weight: bold; }
+.winner-bahia { color: var(--bahia-blue); font-weight: bold; }
+.winner-draw { color: var(--text-secondary); }
+
+/* Summary */
+#summary {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border-color);
+    gap: 20px;
+}
+
+#summary h3 {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 5px;
+}
+
+#summary .score {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+#sport-summary .score { color: var(--sport-red); }
+#bahia-summary .score { color: var(--bahia-blue); }
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-secondary);
+}
+
+@media (min-width: 992px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card.full-width {
+        grid-column: span 2;
+    }
+}
