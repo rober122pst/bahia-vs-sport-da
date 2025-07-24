@@ -173,25 +173,31 @@ document.addEventListener('DOMContentLoaded', () => {
             const scores = yearlyData[year];
             sportTotalPoints += scores.Sport;
             bahiaTotalPoints += scores.Bahia;
+            const row = document.createElement('tr');
+            row.className = 'border-b border-gray-600 h-12 text-center';
 
             let winner = 'Empate';
-            let winnerClass = 'winner-draw';
+            let winnerGradient = 'from-none';
+            let winnerImage = 'https://upload.wikimedia.org/wikipedia/commons/2/24/Transparent_Square_Tiles_Texture.png';
             if (scores.Sport > scores.Bahia) {
                 sportWins++;
-                winner = '🦁 Sport';
-                winnerClass = 'winner-sport';
+                winner = 'Sport';
+                winnerGradient = 'from-red-600';
+                winnerImage = 'https://upload.wikimedia.org/wikipedia/pt/1/17/Sport_Club_do_Recife.png';
+                row.className = 'border-b border-red-600 h-12 text-center';
             } else if (scores.Bahia > scores.Sport) {
                 bahiaWins++;
-                winner = '🦸‍♂️ Bahia';
-                winnerClass = 'winner-bahia';
+                winner = 'Bahia';
+                winnerGradient = 'from-sky-600';
+                winnerImage = 'https://upload.wikimedia.org/wikipedia/pt/9/90/ECBahia.png';
+                row.className = ' border-b border-sky-600 h-12 text-center';
             }
 
-            const row = document.createElement('tr');
             row.innerHTML = `
-                <td>${year}</td>
-                <td class="${scores.Sport > scores.Bahia ? 'winner-sport' : ''}">${scores.Sport}</td>
-                <td class="${scores.Bahia > scores.Sport ? 'winner-bahia' : ''}">${scores.Bahia}</td>
-                <td class="${winnerClass}">${winner}</td>
+                <td class="bg-gradient-to-r ${winnerGradient} font-bold relative overflow-hidden"><img class="absolute top-[-30px] left-[-35px] w-20" src="${winnerImage}" alt="${winner}-logo"></td>
+                 <td class="${scores.Sport > scores.Bahia ? 'font-bold text-red-600' : ''}">${scores.Sport}</td>
+                <td class="${scores.Bahia > scores.Sport ? 'font-bold text-sky-600' : ''}">${scores.Bahia}</td>
+                <td class="font-bold">${year}</td>
             `;
             yearlyTableBody.appendChild(row);
         });
@@ -224,21 +230,25 @@ document.addEventListener('DOMContentLoaded', () => {
         Object.keys(decadeData).sort().forEach(decade => {
             const scores = decadeData[decade];
             let winner = 'Empate';
-            let winnerClass = 'winner-draw';
-            if (scores.Sport > scores.Bahia) {
-                winner = '🦁 Sport';
-                winnerClass = 'winner-sport';
-            } else if (scores.Bahia > scores.Sport) {
-                winner = '🦸‍♂️ Bahia';
-                winnerClass = 'winner-bahia';
-            }
-            
+            let winnerImage = 'https://upload.wikimedia.org/wikipedia/commons/2/24/Transparent_Square_Tiles_Texture.png';
             const row = document.createElement('tr');
+            row.className = 'h-12 text-center';
+
+            if (scores.Sport > scores.Bahia) {
+                winner = 'Sport';
+                winnerImage = 'https://upload.wikimedia.org/wikipedia/pt/1/17/Sport_Club_do_Recife.png';
+                row.className = 'border-b border-red-600 h-12 text-center';
+            } else if (scores.Bahia > scores.Sport) {
+                winner = 'Bahia';
+                winnerImage = 'https://upload.wikimedia.org/wikipedia/pt/9/90/ECBahia.png';
+                row.className = ' border-b border-sky-600 h-12 text-center';
+            }
+
             row.innerHTML = `
-                <td>${decade}</td>
-                <td class="${scores.Sport > scores.Bahia ? 'winner-sport' : ''}">${scores.Sport}</td>
-                <td class="${scores.Bahia > scores.Sport ? 'winner-bahia' : ''}">${scores.Bahia}</td>
-                <td class="${winnerClass}">${winner}</td>
+                <td class="bg-gradient-to-r ${scores.Sport > scores.Bahia ? 'from-red-700' : 'from-sky-700'} font-bold relative overflow-hidden"><img class="absolute top-[-30px] left-[-35px] w-20" src="${winnerImage}" alt="${winner}-logo"></td>
+                <td class="${scores.Sport > scores.Bahia ? 'font-bold text-red-600' : ''}">${scores.Sport}</td>
+                <td class="${scores.Bahia > scores.Sport ? 'font-bold text-sky-600' : ''}">${scores.Bahia}</td>
+                <td class="font-bold">${decade}</td>
             `;
             decadeTableBody.appendChild(row);
         });
