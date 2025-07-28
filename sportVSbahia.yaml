@@ -569,7 +569,7 @@
         Libertadores: null
     Bahia:
         Estadual: 3
-        Regional: 4             # Jahia passa o Sport pela primeira vez
+        Regional: 0
         Brasileirão: 4          # Promovido
         Copa_Brasil: 1          # Oitavas
         Sul-Americana: null

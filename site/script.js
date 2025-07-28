@@ -1,21 +1,35 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Team colors for the chart
-    const SPORT_COLOR = 'rgba(216, 33, 40, 0.8)';
+    const SPORT_COLOR = 'rgba(216, 33, 40, 0.5)';
     const SPORT_BORDER_COLOR = 'rgba(216, 33, 40, 1)';
     const SPORT_LOGO = 'https://upload.wikimedia.org/wikipedia/pt/1/17/Sport_Club_do_Recife.png'
-    const BAHIA_COLOR = 'rgba(0, 116, 217, 0.8)';
+    const BAHIA_COLOR = 'rgba(0, 116, 217, 0.5)';
     const BAHIA_BORDER_COLOR = 'rgba(0, 116, 217, 1)';
     const BAHIA_LOGO = 'https://upload.wikimedia.org/wikipedia/pt/9/90/ECBahia.png';
     
     let chart;
+    let chartProgression;
     let rawData = {};
     // List of all possible competitions found in the data
     const allCompetitions = new Set();
     let allFiltersSelected = true;
 
+    const weights = {
+            Estadual: 1,
+            Regional: 2,
+            Copa_Campeões: 3,
+            Brasileirão_C: 1,
+            Brasileirão_B: 2,
+            Brasileirão: 5,
+            Copa_Brasil: 4,
+            Sul_Americana: 4,
+            Libertadores: 7
+        }
+
     // DOM element references
     const filtersContainer = document.getElementById('competition-filters');
     const chartCanvas = document.getElementById('performance-chart').getContext('2d');
+    const chartProgressionCanvas = document.getElementById('progression-chart').getContext('2d');
     const yearlyTableBody = document.querySelector('#yearly-performance-table tbody');
     const decadeTableBody = document.querySelector('#decade-performance-table tbody');
     const summaryContainer = document.getElementById('summary');
@@ -68,18 +82,44 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     // --- Data Processing ---
+    function weightedData() {
+        const weightedData = {};
+        for (const year in rawData) {
+            weightedData[year] = {};
+            for (const team in rawData[year]) {
+                weightedData[year][team] = {};
+                for (const comp in rawData[year][team]) {
+                    const value = rawData[year][team][comp];
+                    const weight = weights[comp] || 1;
+
+                    if (value === null) {
+                        weightedData[year][team][comp] = null;
+                    }else if (value < 0) {
+                        weightedData[year][team][comp] = Math.round(value / weight);
+                    }else {
+                        weightedData[year][team][comp] = value * weight;
+                    }
+                }
+            }
+        }
+        return weightedData
+    }
+
     function getFilteredData() {
         const selectedCompetitions = Array.from(document.querySelectorAll('#competition-filters input:checked')).map(cb => cb.value);
+
+        const data = weightedData();
+
         const yearlyScores = {};
         
-        for (const year in rawData) {
+        for (const year in data) {
             yearlyScores[year] = { Sport: 0, Bahia: 0 };
             for (const comp of selectedCompetitions) {
-                if (rawData[year].Sport && typeof rawData[year].Sport[comp] === 'number') {
-                    yearlyScores[year].Sport += rawData[year].Sport[comp];
+                if (data[year].Sport && typeof data[year].Sport[comp] === 'number') {
+                    yearlyScores[year].Sport += data[year].Sport[comp];
                 }
-                if (rawData[year].Bahia && typeof rawData[year].Bahia[comp] === 'number') {
-                    yearlyScores[year].Bahia += rawData[year].Bahia[comp];
+                if (data[year].Bahia && typeof data[year].Bahia[comp] === 'number') {
+                    yearlyScores[year].Bahia += data[year].Bahia[comp];
                 }
             }
         }
@@ -90,6 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateDashboard() {
         const yearlyData = getFilteredData();
         updateChart(yearlyData);
+        updateProgessionChart(yearlyData);
         updateTablesAndSummary(yearlyData);
         updateWinnerChard(yearlyData);
     }
@@ -98,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const labels = Object.keys(data).sort();
         const sportScores = labels.map(year => data[year].Sport);
         const bahiaScores = labels.map(year => data[year].Bahia);
-
+        
         if (chart) {
             chart.data.labels = labels;
             chart.data.datasets[0].data = sportScores;
@@ -118,7 +159,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         tension: 0.2,
                         pointBackgroundColor: SPORT_BORDER_COLOR,
                         pointRadius: 4,
-                    }, {
+                    }, 
+                    {
                         label: 'Bahia',
                         data: bahiaScores,
                         borderColor: BAHIA_BORDER_COLOR,
@@ -127,14 +169,88 @@ document.addEventListener('DOMContentLoaded', () => {
                         tension: 0.2,
                         pointBackgroundColor: BAHIA_BORDER_COLOR,
                         pointRadius: 4,
-                    }]
+                    }
+                ]
                 },
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
                     scales: {
                         x: { ticks: { color: '#9CA3AF' }, grid: { color: 'rgba(107, 114, 128, 0.2)' } },
-                        y: { ticks: { color: '#9CA3AF' }, grid: { color: 'rgba(107, 114, 128, 0.2)' } }
+                        y: { ticks: { color: '#9CA3AF' }, grid: { color: 'rgba(107, 114, 128, 0.2)' } },
+                    },
+                    plugins: {
+                        legend: { labels: { color: '#9CA3AF', font: { size: 14 } } },
+                        tooltip: {
+                            backgroundColor: 'rgba(0,0,0,0.8)',
+                            titleFont: { size: 14 },
+                            bodyFont: { size: 12 },
+                        }
+                    }
+                }
+            });
+        }
+    }
+
+    function updateProgessionChart(data) {
+        const labels = Object.keys(data).sort();
+        const sportScores = labels.map(year => data[year].Sport/10);
+        const bahiaScores = labels.map(year => data[year].Bahia/10);
+        let sportTotal = 0, bahiaTotal = 0;
+        const sportTotalScores = sportScores.map(score => sportTotal += score);
+        const bahiaTotalScores = bahiaScores.map(score => bahiaTotal += score);
+        let sportLeaders = 0, bahiaLeaders = 0;
+        sportTotalScores.forEach((score, index) => {
+            if (score > bahiaTotalScores[index]) {
+                sportLeaders++;
+            }
+        })
+        bahiaTotalScores.forEach((score, index) => {
+            if (score > sportTotalScores[index]) {
+                bahiaLeaders++;
+            }
+        })
+        document.getElementById('sport-progression').querySelector('p').textContent = `${sportLeaders} ano(s) na liderança`;
+        document.getElementById('bahia-progression').querySelector('p').textContent = `${bahiaLeaders} ano(s) na liderança`;
+        
+        if (chartProgression) {
+            chartProgression.data.labels = labels;
+            chartProgression.data.datasets[0].data = sportTotalScores;
+            chartProgression.data.datasets[1].data = bahiaTotalScores;
+            chartProgression.update();
+        } else {
+            chartProgression = new Chart(chartProgressionCanvas, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Sport',
+                        data: sportTotalScores,
+                        borderColor: SPORT_BORDER_COLOR,
+                        backgroundColor: SPORT_COLOR,
+                        fill: true,
+                        tension: 0,
+                        pointBackgroundColor: SPORT_BORDER_COLOR,
+                        pointRadius: 4,
+                    }, 
+                    {
+                        label: 'Bahia',
+                        data: bahiaTotalScores,
+                        borderColor: BAHIA_BORDER_COLOR,
+                        backgroundColor: BAHIA_COLOR,
+                        fill: true,
+                        tension: 0,
+                        pointBackgroundColor: BAHIA_BORDER_COLOR,
+                        pointRadius: 4,
+                    },
+                ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: { ticks: { color: '#9CA3AF' }, grid: { color: 'rgba(107, 114, 128, 0.2)' } },
+                        y: { ticks: { color: '#9CA3AF' }, grid: { color: 'rgba(107, 114, 128, 0.2)' } },
                     },
                     plugins: {
                         legend: { labels: { color: '#9CA3AF', font: { size: 14 } } },
@@ -156,6 +272,8 @@ document.addEventListener('DOMContentLoaded', () => {
         let sportBestYearPoints = 0, bahiaBestYearPoints = 0;
         let sportBestYear = '', bahiaBestYear = '';
 
+        let winner = 'empate';
+
         Object.keys(yearlyData).sort().forEach(year => {
             const scores = yearlyData[year];
             yearsTotal++;
@@ -168,11 +286,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 bahiaWins++;
             }
             
-            if (sportBestYearPoints < scores.Sport) {
+            if (sportBestYearPoints <= scores.Sport) {
                 sportBestYear = year;
                 sportBestYearPoints = scores.Sport;
             }
-            if (bahiaBestYearPoints < scores.Bahia) {
+            if (bahiaBestYearPoints <= scores.Bahia) {
                 bahiaBestYear = year;
                 bahiaBestYearPoints = scores.Bahia;
             }
@@ -180,6 +298,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         if (sportTotalPoints > bahiaTotalPoints) {
+            winner = 'sport';
+        }else if (bahiaTotalPoints > sportTotalPoints) {
+            winner = 'bahia';
+        } else {
+            if (sportWins > bahiaWins) {
+                winner = 'sport';
+            }else if (bahiaWins > sportWins) {
+                winner = 'bahia';
+            }
+        }
+
+        if (winner === 'sport') {
             logoWinnerElement.src = SPORT_LOGO;
             nameWinnerText.textContent = 'Sport Recife';
             nameWinnerText.className = 'tracking-widest text-2xl text-red-700'
@@ -194,12 +324,25 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h3>Média de pontos/ano</h3>
                     <p class="score">${Math.round(sportTotalPoints/yearsTotal)}</p>
                     <h3>Melhor ano</h3>
-                    <p class="score">${sportBestYear}</p>
+                    <p class="score">${sportBestYear} (${sportBestYearPoints})</p>
                 </div>`;
-        }else if (bahiaTotalPoints > sportTotalPoints) {
+        }else if (winner === 'bahia') {
             logoWinnerElement.src = BAHIA_LOGO;
             nameWinnerText.textContent = 'EC Bahia';
-            nameWinnerText.className = 'tracking-widest text-2xl text-sky-700'
+            nameWinnerText.className = 'tracking-widest text-2xl text-sky-700';
+            summaryWinnerContainer.innerHTML = `
+                <div>
+                    <h3>Vitórias Anuais</h3>
+                    <p class="score">${bahiaWins}</p>
+                    <h3>Total de Pontos</h3>
+                    <p class="score">${bahiaTotalPoints}</p>
+                </div>
+                <div>
+                    <h3>Média de pontos/ano</h3>
+                    <p class="score">${Math.round(bahiaTotalPoints/yearsTotal)}</p>
+                    <h3>Melhor ano</h3>
+                    <p class="score">${bahiaBestYear} (${bahiaBestYearPoints})</p>
+                </div>`;
         }
         
     }

@@ -9,6 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-trendline"></script>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
@@ -34,56 +35,70 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
             
             <!-- Filters Card -->
-            <section class="lg:col-span-2 bg-[#1e1e1e] rounded-xl p-6 border border-red-700 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+            <section class="lg:col-span-2 bg-[#1e1e1e] rounded-xl p-6 border border-gray-700 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                 <h2 class="text-2xl font-light mb-4 pb-3 border-b border-gray-600">Filtrar Competições</h2>
-                <div id="competition-filters" class="flex flex-wrap justify-around gap-12">
+                <div id="competition-filters" class="flex flex-wrap justify-around gap-5 my-5">
                     <div class="filter-item">
                         <input type="checkbox" id="Brasileirão" class="peer hidden" value="Brasileirão">
-                        <label for="Brasileirão" class="cursor-pointer inline-block transition duration-300 peer-checked:grayscale-0 grayscale max-w-24">
-                            <img src="https://upload.wikimedia.org/wikipedia/pt/4/42/Campeonato_Brasileiro_S%C3%A9rie_A_logo.png" alt="Imagem" class="max-h-24 object-cover m-auto" />
-                            <p class="mt-2 text-center font-bold text-sm">Brasileirão</p>
+                        <label for="Brasileirão" class="cursor-pointer inline-block transition duration-300 peer-checked:grayscale-0 grayscale">
+                            <img src="https://image-service.onefootball.com/transform?w=256&dpr=2&image=https://images.onefootball.com/icons/leagueColoredCompetition/128/16.png" alt="Imagem" class="max-h-12 object-cover m-auto" />
+                            <p class="mt-2 text-center font-bold text-xs">Brasileirão</p>
+                        </label>
+                    </div>
+                    <div class="filter-item">
+                        <input type="checkbox" id="Brasileirão_B" class="peer hidden" value="Brasileirão_B">
+                        <label for="Brasileirão_B" class="cursor-pointer inline-block transition duration-300 peer-checked:grayscale-0 grayscale">
+                            <img src="https://image-service.onefootball.com/transform?w=256&dpr=2&image=https://images.onefootball.com/icons/leagueColoredCompetition/128/119.png" alt="Imagem" class="max-h-12 object-cover m-auto" />
+                            <p class="mt-2 text-center font-bold text-xs">Brasileirão Série B</p>
+                        </label>
+                    </div>
+                    <div class="filter-item">
+                        <input type="checkbox" id="Brasileirão_C" class="peer hidden" value="Brasileirão_C">
+                        <label for="Brasileirão_C" class="cursor-pointer inline-block transition duration-300 peer-checked:grayscale-0 grayscale">
+                            <img src="https://image-service.onefootball.com/transform?w=256&dpr=2&image=https://images.onefootball.com/icons/leagueColoredCompetition/128/195.png" alt="Imagem" class="max-h-12 object-cover m-auto" />
+                            <p class="mt-2 text-center font-bold text-xs">Brasileirão Série C</p>
                         </label>
                     </div>
                     <div class="filter-item">
                         <input type="checkbox" id="Copa do Brasil" class="peer hidden" value="Copa_Brasil">
-                        <label for="Copa do Brasil" class="cursor-pointer inline-block transition duration-300 peer-checked:grayscale-0 grayscale max-w-24">
-                            <img src="https://logodownload.org/wp-content/uploads/2018/10/copa-do-brasil-logo-1.png" alt="Imagem" class="max-h-24 object-cover m-auto" />
-                            <p class="mt-2 text-center font-bold text-sm">Copa do Brasil</p>
+                        <label for="Copa do Brasil" class="cursor-pointer inline-block transition duration-300 peer-checked:grayscale-0 grayscale">
+                            <img src="https://logodownload.org/wp-content/uploads/2018/10/copa-do-brasil-logo-1.png" alt="Imagem" class="max-h-12 object-cover m-auto" />
+                            <p class="mt-2 text-center font-bold text-xs">Copa do Brasil</p>
                         </label>
                     </div>
                     <div class="filter-item">
                         <input type="checkbox" id="Copa do Nordeste" class="peer hidden" value="Regional">
-                        <label for="Copa do Nordeste" class="cursor-pointer inline-block transition duration-300 peer-checked:grayscale-0 grayscale max-w-24">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/CopadoNordeste2013-.png/1200px-CopadoNordeste2013-.png" alt="Imagem" class="max-h-24 object-cover m-auto" />
-                            <p class="mt-2 text-center font-bold text-sm">Lampiões</p>
+                        <label for="Copa do Nordeste" class="cursor-pointer inline-block transition duration-300 peer-checked:grayscale-0 grayscale">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/CopadoNordeste2013-.png/1200px-CopadoNordeste2013-.png" alt="Imagem" class="max-h-12 object-cover m-auto" />
+                            <p class="mt-2 text-center font-bold text-xs">Lampiões</p>
                         </label>
                     </div>
                     <div class="filter-item">
                         <input type="checkbox" id="Estadual" class="peer hidden" value="Estadual">
-                        <label for="Estadual" class="cursor-pointer inline-block transition duration-300 peer-checked:grayscale-0 grayscale max-w-24">
-                            <img src="https://mapavivo.com.br/wp-content/uploads/2025/03/mapas-da-regiao-do-brasil-mapas-dos-estados-do-brasil-e-suas-capitais-estados-economia-cultura-pratos-tipicos-pupulacao-cultura-siglas-5-regioes-mapa-brasil.png" alt="Imagem" class="max-h-24 object-cover m-auto" />
-                            <p class="mt-2 text-center font-bold text-sm">Estadual</p>
+                        <label for="Estadual" class="cursor-pointer inline-block transition duration-300 peer-checked:grayscale-0 grayscale">
+                            <img src="https://mapavivo.com.br/wp-content/uploads/2025/03/mapas-da-regiao-do-brasil-mapas-dos-estados-do-brasil-e-suas-capitais-estados-economia-cultura-pratos-tipicos-pupulacao-cultura-siglas-5-regioes-mapa-brasil.png" alt="Imagem" class="max-h-12 object-cover m-auto" />
+                            <p class="mt-2 text-center font-bold text-xs">Estadual</p>
                         </label>
                     </div>
                     <div class="filter-item">
                         <input type="checkbox" id="Libertadores" class="peer hidden" value="Libertadores">
-                        <label for="Libertadores" class="cursor-pointer inline-block transition duration-300 peer-checked:grayscale-0 grayscale max-w-24">
-                            <img src="https://image-service.onefootball.com/transform?w=256&dpr=2&image=https://images.onefootball.com/icons/leagueColoredCompetition/128/76.png" alt="Imagem" class="max-h-24 object-cover m-auto" />
-                            <p class="mt-2 text-center font-bold text-sm">Libertadores</p>
+                        <label for="Libertadores" class="cursor-pointer inline-block transition duration-300 peer-checked:grayscale-0 grayscale">
+                            <img src="https://image-service.onefootball.com/transform?w=256&dpr=2&image=https://images.onefootball.com/icons/leagueColoredCompetition/128/76.png" alt="Imagem" class="max-h-12 object-cover m-auto" />
+                            <p class="mt-2 text-center font-bold text-xs">Libertadores</p>
                         </label>
                     </div>
                     <div class="filter-item">
                         <input type="checkbox" id="Sul-Americana" class="peer hidden" value="Sul-Americana">
-                        <label for="Sul-Americana" class="cursor-pointer inline-block transition duration-300 peer-checked:grayscale-0 grayscale max-w-24">
-                            <img src="https://image-service.onefootball.com/transform?w=256&dpr=2&image=https://images.onefootball.com/icons/leagueColoredCompetition/128/102.png" alt="Imagem" class="max-h-24 object-cover m-auto" />
-                            <p class="mt-2 text-center font-bold text-sm">Sul-Americana</p>
+                        <label for="Sul-Americana" class="cursor-pointer inline-block transition duration-300 peer-checked:grayscale-0 grayscale">
+                            <img src="https://image-service.onefootball.com/transform?w=256&dpr=2&image=https://images.onefootball.com/icons/leagueColoredCompetition/128/102.png" alt="Imagem" class="max-h-12 object-cover m-auto" />
+                            <p class="mt-2 text-center font-bold text-xs">Sul-Americana</p>
                         </label>
                     </div>
                     <div class="filter-item">
-                        <input type="checkbox" id="Copa dos Campeões" class="peer hidden" value="Copa dos Campeões">
-                        <label for="Copa dos Campeões" class="cursor-pointer inline-block transition duration-300 peer-checked:grayscale-0 grayscale max-w-24">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/CopadosCampeoes2000.png" alt="Imagem" class="max-h-24 object-cover m-auto" />
-                            <p class="mt-2 text-center font-bold text-sm">Copa dos Campeões</p>
+                        <input type="checkbox" id="Copa_Campeões" class="peer hidden" value="Copa_Campeões">
+                        <label for="Copa_Campeões" class="cursor-pointer inline-block transition duration-300 peer-checked:grayscale-0 grayscale">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/CopadosCampeoes2000.png" alt="Imagem" class="max-h-12 object-cover m-auto" />
+                            <p class="mt-2 text-center font-bold text-xs">Copa dos Campeões</p>
                         </label>
                     </div>
                 </div>
@@ -95,35 +110,33 @@
             </section>
 
             <!-- Chart Card -->
-            <section class="lg:col-span-2 bg-[#1e1e1e] rounded-xl p-6 border border-sky-700 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+            <section class="lg:col-span-2 bg-[#1e1e1e] rounded-xl p-6 border border-gray-700 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                 <h2 class="text-2xl font-light mb-4 pb-3 border-b border-gray-600">Desempenho Anual (Pontos)</h2>
-                <div class="relative h-96">
+                <div class="relative h-96 ">
                     <canvas id="performance-chart"></canvas>
                 </div>
             </section>
 
-            <!-- Decade Card -->
-            <section class="bg-[#1e1e1e] rounded-xl p-6 border border-red-700 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                <h2 class="text-2xl font-light mb-4 pb-3 border-b border-gray-600">Desempenho por Década</h2>
-                <div class="overflow-x-auto">
-                    <table id="decade-performance-table" class="w-full mt-4">
-                        <thead class="bg-gray-700">
-                            <tr>
-                                <th class="py-3 px-4 font-bold  w-32"></th>
-                                <th class="py-3 px-4 font-bold">Sport</th>
-                                <th class="py-3 px-4 font-bold">Bahia</th>
-                                <th class="py-3 px-4 font-bold">Década</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- Table will be generated by JavaScript -->
-                        </tbody>
-                    </table>
+            <!-- Chart Card -->
+            <section class="bg-[#1e1e1e] rounded-xl p-6 border border-gray-700 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
+                <h2 class="text-2xl font-light mb-4 pb-3 border-b border-gray-600">Progressão Anual (Pontos)</h2>
+                <div class="relative h-96 border-b border-gray-600 pb-4">
+                    <canvas id="progression-chart"></canvas>
+                </div>
+                <div class="flex-1 flex justify-center items-center flex-col md:flex-row mx-2 mt-4">
+                    <div id="sport-progression" class="w-full h-10 relative overflow-hidden  bg-gradient-to-r from-red-800/50 flex items-center justify-center">
+                        <img class="absolute top-[50%] left-[-16px] w-[38px] translate-y-[-50%]" src="https://upload.wikimedia.org/wikipedia/pt/1/17/Sport_Club_do_Recife.png" alt="logo-sport">
+                        <p class="font-bold">0 ano(s) na liderança</p>
+                    </div>
+                    <div id="bahia-progression" class="w-full h-10 relative overflow-hidden  bg-gradient-to-r from-sky-800/50 flex items-center justify-center">
+                        <img class="absolute top-[50%] left-[-16px] w-[38px] translate-y-[-50%]" src="https://upload.wikimedia.org/wikipedia/pt/9/90/ECBahia.png" alt="logo-sport">
+                        <p class="font-bold">0 ano(s) na liderança</p>
+                    </div>
                 </div>
             </section>
 
             <!-- Decade Card -->
-            <section class="bg-[#1e1e1e] rounded-xl p-6 border border-red-700 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+            <section class="bg-[#1e1e1e] rounded-xl p-6 border border-gray-700 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                 <h2 class="text-2xl font-light mb-4 pb-3 border-b border-gray-600">Time na liderança</h2>
                 <div class=" border-b border-gray-600 p-6 mb-4">
                     <img id="winner-image" class="m-auto h-80" src="https://upload.wikimedia.org/wikipedia/commons/2/24/Transparent_Square_Tiles_Texture.png" alt="">
@@ -136,8 +149,28 @@
                 </div>
             </section>
 
+            <!-- Decade Card -->
+            <section class="lg:col-span-2 bg-[#1e1e1e] rounded-xl p-6 border border-gray-700 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <h2 class="text-2xl font-light mb-4 pb-3 border-b border-gray-600">Desempenho por Década</h2>
+                <div class="overflow-x-auto">
+                    <table id="decade-performance-table" class="w-full mt-4">
+                        <thead class="bg-gray-700">
+                            <tr>
+                                <th class="py-3 px-4 font-bold opacity-0">Vencedor</th>
+                                <th class="py-3 px-4 font-bold">Sport</th>
+                                <th class="py-3 px-4 font-bold">Bahia</th>
+                                <th class="py-3 px-4 font-bold">Década</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Table will be generated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
             <!-- Overview Card -->
-            <section class="lg:col-span-2 bg-[#1e1e1e] rounded-xl p-6 border border-sky-700 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+            <section class="lg:col-span-2 bg-[#1e1e1e] rounded-xl p-6 border border-gray-700 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                 <h2 class="text-2xl font-light mb-4 pb-3 border-b border-gray-600">Visão Geral do Desempenho</h2>
                 <div id="summary" class="flex flex-wrap justify-around text-center py-4 border-b border-gray-600 gap-4">
                     <!-- Summary will be generated by JavaScript -->
