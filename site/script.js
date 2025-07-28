@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
             Estadual: 1,
             Regional: 2,
             Copa_Campeões: 3,
-            Brasileirão_C: 1,
+            Brasileirão_C: .5,
             Brasileirão_B: 2,
             Brasileirão: 5,
             Copa_Brasil: 4,
@@ -431,6 +431,34 @@ document.addEventListener('DOMContentLoaded', () => {
                 <td class="font-bold">${decade}</td>
             `;
             decadeTableBody.appendChild(row);
+        });
+    }
+
+    function countTrophies(data) {
+        let trophies = { Sport: 0, Bahia: 0 };
+        let nationalTrophies = { Sport: 0, Bahia: 0 };
+        for (const year in data) {
+            for (const team of ['Sport', 'Bahia']) {
+                if(data[year][team]) {
+                    for (const comp in data[year][team]) {
+                        if(data[year][team][comp] === 120) {
+                            trophies[year][team]++;
+                            if (['Copa_Brasil', 'Brasileirão', 'Brasileirão_B'].includes(comp)) {
+                                nationalTrophies[year][team]++;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        const decadeData = {};
+        Object.entries(trophies).forEach(([year, trophies_]) => {
+            const decade = `${Math.floor(parseInt(year) / 10)}0s`;
+            if (!decadeData[decade]) {
+                decadeData[decade] = { Sport: 0, Bahia: 0 };
+            }
+            decadeData[decade].Sport += scores.Sport;
+            decadeData[decade].Bahia += scores.Bahia;
         });
     }
 

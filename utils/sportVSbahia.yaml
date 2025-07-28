@@ -576,7 +576,7 @@
     Bahia:
         Estadual: 120
         Regional: 0
-        Brasileirão_N: 70       # Promovido
+        Brasileirão_B: 70       # Promovido
         Copa_Brasil: 30         # Oitavas
         Sul-Americana: null
         Libertadores: null
