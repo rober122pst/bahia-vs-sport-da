@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const chartProgressionCanvas = document.getElementById('progression-chart').getContext('2d');
     const yearlyTableBody = document.querySelector('#yearly-performance-table tbody');
     const decadeTableBody = document.querySelector('#decade-performance-table tbody');
+    const titlesTableBody = document.querySelector('#decade-titles-table tbody');
     const summaryContainer = document.getElementById('summary');
     const logoWinnerElement = document.getElementById('winner-image');
     const nameWinnerText = document.getElementById('winner-name');
@@ -133,6 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
         updateProgessionChart(yearlyData);
         updateTablesAndSummary(yearlyData);
         updateWinnerChard(yearlyData);
+        countTrophies(rawData);
     }
     
     function updateChart(data) {
@@ -435,31 +437,70 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function countTrophies(data) {
-        let trophies = { Sport: 0, Bahia: 0 };
-        let nationalTrophies = { Sport: 0, Bahia: 0 };
+        const selectedCompetitions = Array.from(document.querySelectorAll('#competition-filters input:checked')).map(cb => cb.value);
+        let trophies = { };
         for (const year in data) {
-            for (const team of ['Sport', 'Bahia']) {
+            for (const team in data[year]) {
                 if(data[year][team]) {
                     for (const comp in data[year][team]) {
+                        
                         if(data[year][team][comp] === 120) {
-                            trophies[year][team]++;
-                            if (['Copa_Brasil', 'Brasileirão', 'Brasileirão_B'].includes(comp)) {
-                                nationalTrophies[year][team]++;
+                            if (!trophies[year]) {
+                                trophies[year] = { Sport: { titles: 0, comps: [] }, Bahia: { titles: 0, comps: [] } };
+                            }
+                            if (selectedCompetitions.includes(comp)) {
+                                trophies[year][team]['titles']++;
+                                trophies[year][team]['comps'].push(comp);
                             }
                         }
                     }
                 }
             }
         }
+        
         const decadeData = {};
         Object.entries(trophies).forEach(([year, trophies_]) => {
             const decade = `${Math.floor(parseInt(year) / 10)}0s`;
             if (!decadeData[decade]) {
-                decadeData[decade] = { Sport: 0, Bahia: 0 };
+                decadeData[decade] = { Sport: { titles: 0, comps: {} }, Bahia: { titles: 0, comps: {} } };
             }
-            decadeData[decade].Sport += scores.Sport;
-            decadeData[decade].Bahia += scores.Bahia;
+            decadeData[decade].Sport.titles += trophies_.Sport.titles;
+            decadeData[decade].Bahia.titles += trophies_.Bahia.titles;
+            trophies_.Sport.comps.forEach(comp => {
+                decadeData[decade].Sport.comps[comp] = (decadeData[decade].Sport.comps[comp] || 0) + 1;
+            });
+            trophies_.Bahia.comps.forEach(comp => {
+                decadeData[decade].Bahia.comps[comp] = (decadeData[decade].Bahia.comps[comp] || 0) + 1;
+            });
         });
+        
+        titlesTableBody.innerHTML = '';
+        Object.keys(decadeData).sort().forEach(decade => {
+            const scores = decadeData[decade];
+            let winner = 'Empate';
+            let winnerImage = 'https://upload.wikimedia.org/wikipedia/commons/2/24/Transparent_Square_Tiles_Texture.png';
+            const row = document.createElement('tr');
+            row.className = 'h-10 text-center';
+
+            if (scores.Sport['titles'] > scores.Bahia['titles']) {
+                winner = 'Sport';
+                winnerImage = SPORT_LOGO;
+                row.className = 'winner-sport h-10 text-center';
+            } else if (scores.Bahia['titles'] > scores.Sport['titles']) {
+                winner = 'Bahia';
+                winnerImage = BAHIA_LOGO;
+                row.className = 'winner-bahia h-10 text-center';
+            }
+
+            row.innerHTML = `
+                <td class="font-bold relative overflow-hidden tracking-widest"><img class="absolute top-[-30px] left-[-35px] w-20" src="${winnerImage}" alt="${winner}-logo"></td>
+                <td class="${scores.Sport['titles'] > scores.Bahia['titles'] ? 'font-bold text-red-600' : ''}">${scores.Sport['titles']}</td>
+                <td class="${scores.Bahia['titles'] > scores.Sport['titles'] ? 'font-bold text-sky-600' : ''}">${scores.Bahia['titles']}</td>
+                <td class="font-bold">${decade}</td>
+            `;
+            titlesTableBody.appendChild(row);
+        });
+
     }
 
     init();
