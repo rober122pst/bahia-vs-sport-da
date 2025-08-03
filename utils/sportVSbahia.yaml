@@ -4,14 +4,14 @@
         Regional: null
         Brasileirão: 120          # Campeão
         Copa_Brasil: null
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
     Bahia:
         Estadual: 120            # Campeão
         Regional: null
         Brasileirão: 20          # Participou (11°)
         Copa_Brasil: null
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
 
 "1988":
@@ -20,14 +20,14 @@
         Regional: null
         Brasileirão: 40          # Quartas de final (top 8)
         Copa_Brasil: null
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: 20         # Participou (Fase de grupos)
     Bahia:
         Estadual: 120            # Campeão
         Regional: null
         Brasileirão: 120         # Campeão
         Copa_Brasil: null
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
 
 "1989":
@@ -36,14 +36,14 @@
         Regional: null
         Brasileirão: -200        # Rebaixado
         Copa_Brasil: 95          # Vice (roubo)
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
     Bahia:
         Estadual: 95             # Vice
         Regional: 0              # N/A +0
         Brasileirão: 10          # Escapou em 2° na repescagem do rebaixamento
         Copa_Brasil: 40          # Quartas
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: 40         # Quartas
 
 "1990":
@@ -53,14 +53,14 @@
         Brasileirão: null
         Brasileirão_B: 120       # Campeão Série B
         Copa_Brasil: null        # Não jogou 
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
     Bahia:
         Estadual: 0           
         Regional: null
         Brasileirão: 65         # Semi-Final
         Copa_Brasil: 40         # Quartas
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
     
 "1991":
@@ -69,14 +69,14 @@
         Regional: null
         Brasileirão: 20         # 18° Lugar
         Copa_Brasil: 30         # Caiu nas oitavas
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
     Bahia:
         Estadual: 120
         Regional: null
         Brasileirão: 20         # 13°
         Copa_Brasil: null
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
 
 "1992":
@@ -85,14 +85,14 @@
         Regional: null
         Brasileirão: 20         # 12°
         Copa_Brasil: 65         # Semi-Final
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
     Bahia:
         Estadual: 95
         Regional: null
         Brasileirão: 20         # 18° lugar
         Copa_Brasil: 30        # Oitavas
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
 
 "1993":
@@ -101,14 +101,14 @@
         Regional: null
         Brasileirão: 10         # 25° lugar
         Copa_Brasil: 30         # Oitavas
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
     Bahia:
         Estadual: 120
         Regional: null
         Brasileirão: 10         # 30° lugar
         Copa_Brasil: null
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
 
 "1994":
@@ -117,14 +117,14 @@
         Regional: 120             # Campeão
         Brasileirão: 20         # 13° lugar
         Copa_Brasil: null
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
     Bahia:
         Estadual: 120
         Regional: 60             # Terceiro lugar
         Brasileirão: 40         # Quartas
         Copa_Brasil: 30         # Oitavas
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
 
 "1995":
@@ -133,14 +133,14 @@
         Regional: null
         Brasileirão: 10         # 19° lugar
         Copa_Brasil: 10         # Primeira fase
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
     Bahia:
         Estadual: 0
         Regional: null
         Brasileirão: 10         # 18° lugar
         Copa_Brasil: 30         # Oitavas
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
 
 "1996":
@@ -149,14 +149,14 @@
         Regional: null
         Brasileirão: 30          # 10° lugar
         Copa_Brasil: null
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
     Bahia:
         Estadual: 95
         Regional: null
         Brasileirão: 10         # 22° lugar
         Copa_Brasil: 20         # Segunda fase
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
 
 "1997":
@@ -165,14 +165,14 @@
         Regional: 60             # 4° lugar
         Brasileirão: 20         # 11° lugar (+2 Campanha muito superior)
         Copa_Brasil: 10         # Primeira fase
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
     Bahia:
         Estadual: 95
         Regional: 95             # Vice
         Brasileirão: -200       # Rebaixado
         Copa_Brasil: 10         # Primeira fase
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
 
 "1998":
@@ -181,7 +181,7 @@
         Regional: 0
         Brasileirão: 40         # Quartas
         Copa_Brasil: 40         # Quartas
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
     Bahia:
         Estadual: 120
@@ -189,7 +189,7 @@
         Brasileirão: null
         Brasileirão_B: 10       # 18° lugar da série B 😂
         Copa_Brasil: 30        # Oitavas
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
 
 "1999":
@@ -198,14 +198,14 @@
         Regional: 60             # Terceiro lugar
         Brasileirão: 10         # 22° lugar
         Copa_Brasil: 20         # Segunda fase
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
     Bahia:
         Estadual: 120
         Regional: 95             # Vice
         Brasileirão: 0          # 3° lugar no quadrangular final
         Copa_Brasil: 40         # Quartas
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
 
 "2000":
@@ -214,7 +214,7 @@
         Regional: 120             # Campeão
         Brasileirão: 40         # Quartas (roubo)
         Copa_Brasil: 10         # Primeira fase
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
         Copa_Campeões: 95   # Vice (valia vaga para libertadores)
     Bahia:
@@ -222,7 +222,7 @@
         Regional: 0
         Brasileirão: 20        # Oitavas
         Copa_Brasil: 30         # Quartas
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
 
 "2001":
@@ -231,14 +231,14 @@
         Regional: 95             # Vice
         Brasileirão: -200       # Rebaixado
         Copa_Brasil: 20         # Segunda fase
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
     Bahia:
         Estadual: 120
         Regional: 120             # Campeão
         Brasileirão: 40         # 8° lugar
         Copa_Brasil: 20         # Oitavas
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
 
 "2002":
@@ -248,14 +248,14 @@
         Brasileirão: null
         Brasileirão_B: 50       # 5° lugar da série B
         Copa_Brasil: 20         # Segunda fase
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
     Bahia:
         Estadual: 0
         Regional: 120             # Campeão
         Brasileirão: 10         # 19° lugar
         Copa_Brasil: 30         # Oitavas
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
 
 "2003":
@@ -265,14 +265,14 @@
         Brasileirão: null
         Brasileirão_B: 60       # pipocou no quadrangular final e não subiu
         Copa_Brasil: 65         # Semi-Final
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
     Bahia:
         Estadual: 0
         Regional: 0
         Brasileirão: -200       # Rebaixado
         Copa_Brasil: 30        # Oitavas
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
 
 "2004":
@@ -282,7 +282,7 @@
         Brasileirão: null
         Brasileirão_B: 10       # 17° da Série B
         Copa_Brasil: 20         # Segunda fase
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
     Bahia:
         Estadual: 95
@@ -290,7 +290,7 @@
         Brasileirão: null
         Brasileirão_B: 60       # Não subiu no quadrangular final
         Copa_Brasil: null
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
 
 "2005":
@@ -299,14 +299,14 @@
         Regional: null
         Brasileirão_B: 10        # 16° (rebaixamos eles)
         Copa_Brasil: null
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
     Bahia:
         Estadual: 95
         Regional: null
         Brasileirão_B: -200     # Rebaixado pra Série C 😂
         Copa_Brasil: 10         # Primeira fase
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
 
 "2006":
@@ -315,14 +315,14 @@
         Regional: null
         Brasileirão_B: 70       # Subiu pra A
         Copa_Brasil: null
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
     Bahia:
         Estadual: 0
         Regional: null
         Brasileirão_C: 0        # Não subiu pra B 😂😂
         Copa_Brasil: 10         # Primeira fase
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
 
 "2007":
@@ -331,14 +331,14 @@
         Regional: null
         Brasileirão: 20        # 14° lugar
         Copa_Brasil: 30        # Oitavas
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
     Bahia:
         Estadual: 120
         Regional: null
         Brasileirão_C: 70       # Vice da Série C 😯👏👏
         Copa_Brasil: 30        # Oitavas
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
 
 "2008":
@@ -347,14 +347,14 @@
         Regional: null
         Brasileirão: 20         # 11° lugar
         Copa_Brasil: 120        # Campeão
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
     Bahia:
         Estadual: 95
         Regional: null
         Brasileirão_B: 30       # 10° lugar da Série B
         Copa_Brasil: 10         # Primeira fase
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
 
 "2009":
@@ -363,14 +363,14 @@
         Regional: null
         Brasileirão: -200       # Rebaixado
         Copa_Brasil: null       # Tava na Libertadores
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: 30        # Oitavas
     Bahia:
         Estadual: 95
         Regional: null
         Brasileirão_B: 20       # 12° da Série B
         Copa_Brasil: 20         # Segunda fase.
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
 
 "2010":
@@ -379,14 +379,14 @@
         Regional: null
         Brasileirão_B: 50       # 6° lugar da B
         Copa_Brasil: 20         # Oitavas
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
     Bahia:
         Estadual: 95
         Regional: null
         Brasileirão_B: 70       # Promovido pra Série A
         Copa_Brasil: 20         # Segunda fase 
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
 
 "2011":
@@ -395,14 +395,14 @@
         Regional: null
         Brasileirão_B: 70       # Promovido
         Copa_Brasil: 10         # Primeira fase
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
     Bahia:
         Estadual: 0
         Regional: null
         Brasileirão: 20        # 14° lugar
         Copa_Brasil: 10        # Oitavas
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
 
 "2012":
@@ -411,14 +411,14 @@
         Regional: null
         Brasileirão: -200         # Rebaixado
         Copa_Brasil: null
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
     Bahia:
         Estadual: 120
         Regional: null
         Brasileirão: 10         # 15° lugar
         Copa_Brasil: null
-        Sul-Americana: 20       # Segunda fase
+        Sul_Americana: 20       # Segunda fase
         Libertadores: null
 
 "2013":
@@ -427,14 +427,14 @@
         Regional: 0
         Brasileirão_B: 70       # Promovido
         Copa_Brasil: 20         # Segunda fase
-        Sul-Americana: 30       # Oitavas
+        Sul_Americana: 30       # Oitavas
         Libertadores: null
     Bahia:
         Estadual: 95             # Levou 7 do rival na final
         Regional: 0
         Brasileirão: 20        # 12º lugar
         Copa_Brasil: 20         # Segunda fase
-        Sul-Americana: 30       # Oitavas
+        Sul_Americana: 30       # Oitavas
         Libertadores: null
 
 "2014":
@@ -443,14 +443,14 @@
         Regional: 120           # Campeão
         Brasileirão: 20         # 11º
         Copa_Brasil: 20         # Segunda fase
-        Sul-Americana: 20       # Segunda fase
+        Sul_Americana: 20       # Segunda fase
         Libertadores: null
     Bahia:
         Estadual: 120
         Regional: 0
         Brasileirão: -200         # Rebaixado
         Copa_Brasil: 20         # Terceira fase
-        Sul-Americana: 30       # Oitavas
+        Sul_Americana: 30       # Oitavas
         Libertadores: null
 
 "2015":
@@ -459,14 +459,14 @@
         Regional: 65            # Semi-Final
         Brasileirão: 60         # 6º lugar
         Copa_Brasil: 20         # Terceira fase
-        Sul-Americana: 30       # Oitavas
+        Sul_Americana: 30       # Oitavas
         Libertadores: null
     Bahia:
         Estadual: 120
         Regional: 95             # Vice
         Brasileirão_B: 30       # 9º lugar da série B
         Copa_Brasil: 20         # Terceira fase
-        Sul-Americana: 20       # 4x1 na Ilha pra toda américa ver
+        Sul_Americana: 20       # 4x1 na Ilha pra toda américa ver
         Libertadores: null
 
 "2016":
@@ -475,14 +475,14 @@
         Regional: 65            # Semi-Final
         Brasileirão: 20         # 14º lugar
         Copa_Brasil: 10         # Primeira fase
-        Sul-Americana: 20       # Eliminado pelo Sarna Cui
+        Sul_Americana: 20       # Eliminado pelo Sarna Cui
         Libertadores: null
     Bahia:
         Estadual: 95
         Regional: 65            # Semi-Final
         Brasileirão_B: 70       # Promovido
         Copa_Brasil: 20         # Segunda fase
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
 
 "2017":
@@ -491,14 +491,14 @@
         Regional: 95             # Vice
         Brasileirão: 10         # 15º lugar
         Copa_Brasil: 30         # Oitavas
-        Sul-Americana: 40       # Quartas
+        Sul_Americana: 40       # Quartas
         Libertadores: null
     Bahia:
         Estadual: 95
         Regional: 120             # Campeão
         Brasileirão: 20         # 12º lugar
         Copa_Brasil: 20         # Segunda fase
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
 
 "2018":
@@ -507,14 +507,14 @@
         Regional: null          # Começo do fim do Sport. O presidente do Sport removeu o time da competição por "apertar demais" o calendário.
         Brasileirão: -200         # Rebaixado
         Copa_Brasil: 20         # Segunda fase
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
     Bahia:
         Estadual: 120
         Regional: 95            # Vice
         Brasileirão: 20         # 11º lugar
         Copa_Brasil: 40         # Quartas
-        Sul-Americana: 40       # Quartas
+        Sul_Americana: 40       # Quartas
         Libertadores: null
 
 "2019":
@@ -523,14 +523,14 @@
         Regional: null
         Brasileirão_B: 70       # Promovido
         Copa_Brasil: 10         # Primeira fase
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
     Bahia:
         Estadual: 120
         Regional: 0
         Brasileirão: 20        # 11º lugar
         Copa_Brasil: 40         # Quartas
-        Sul-Americana: 10       # Primeira fase
+        Sul_Americana: 10       # Primeira fase
         Libertadores: null
 
 "2020":
@@ -539,14 +539,14 @@
         Regional: 0
         Brasileirão: 10         # 15° lugar
         Copa_Brasil: 10         # Primeira fase
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
     Bahia:
         Estadual: 120
         Regional: 95             # Vice
         Brasileirão: 20         # 14º lugar
         Copa_Brasil: 10         # Primeira fase
-        Sul-Americana: 10       # Primeira fase
+        Sul_Americana: 10       # Primeira fase
         Libertadores: null
 
 "2021":
@@ -555,14 +555,14 @@
         Regional: 0
         Brasileirão: -200         # Rebaixado
         Copa_Brasil: 20         # Primeira fase
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
     Bahia:
         Estadual: 120
         Regional: 120             # Jahia passa o Sport pela primeira vez
         Brasileirão: -200         # Rebaixado
         Copa_Brasil: 30         # Oitavas
-        Sul-Americana: 20       # Fase grupos
+        Sul_Americana: 20       # Fase grupos
         Libertadores: null
 
 "2022":
@@ -571,12 +571,12 @@
         Regional: 95             # O maior roubo da região
         Brasileirão_B: 30       # 7º lugar da série B
         Copa_Brasil: 10         # Primeira fase
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null
     Bahia:
         Estadual: 120
         Regional: 0
         Brasileirão_N: 70       # Promovido
         Copa_Brasil: 30         # Oitavas
-        Sul-Americana: null
+        Sul_Americana: null
         Libertadores: null

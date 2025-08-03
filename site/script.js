@@ -107,22 +107,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function getFilteredData() {
         const selectedCompetitions = Array.from(document.querySelectorAll('#competition-filters input:checked')).map(cb => cb.value);
+        const averageSelected = document.getElementById('average-filter').checked;
+        document.getElementById('average-filter').addEventListener('change', updateDashboard);
 
         const data = weightedData();
 
         const yearlyScores = {};
+        // const averageScores = {};
         
         for (const year in data) {
             yearlyScores[year] = { Sport: 0, Bahia: 0 };
+            let sportWeightSum = 0; let bahiaWeightSum = 0;
             for (const comp of selectedCompetitions) {
                 if (data[year].Sport && typeof data[year].Sport[comp] === 'number') {
+                    sportWeightSum += weights[comp];
                     yearlyScores[year].Sport += data[year].Sport[comp];
                 }
                 if (data[year].Bahia && typeof data[year].Bahia[comp] === 'number') {
+                    bahiaWeightSum += weights[comp];
                     yearlyScores[year].Bahia += data[year].Bahia[comp];
                 }
             }
+            if (averageSelected) {
+                yearlyScores[year].Sport = sportWeightSum ? Math.round(yearlyScores[year].Sport / sportWeightSum) : 0;
+                yearlyScores[year].Bahia = bahiaWeightSum ? Math.round(yearlyScores[year].Bahia / bahiaWeightSum) : 0;
+            }
         }
+        console.log('Filtered Data:', yearlyScores);
         return yearlyScores;
     }
 

@@ -88,8 +88,8 @@
                         </label>
                     </div>
                     <div class="filter-item">
-                        <input type="checkbox" id="Sul-Americana" class="peer hidden" value="Sul-Americana">
-                        <label for="Sul-Americana" class="cursor-pointer inline-block transition duration-300 peer-checked:grayscale-0 grayscale">
+                        <input type="checkbox" id="Sul_Americana" class="peer hidden" value="Sul_Americana">
+                        <label for="Sul_Americana" class="cursor-pointer inline-block transition duration-300 peer-checked:grayscale-0 grayscale">
                             <img src="https://image-service.onefootball.com/transform?w=256&dpr=2&image=https://images.onefootball.com/icons/leagueColoredCompetition/128/102.png" alt="Imagem" class="max-h-12 object-cover m-auto" />
                             <p class="mt-2 text-center font-bold text-xs">Sul-Americana</p>
                         </label>
@@ -102,10 +102,15 @@
                         </label>
                     </div>
                 </div>
-                <button id="toggle-all" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105">
-                    Selecionar Todas / Nenhuma
-                </button>
-
+                <div class="flex gap-4 items-center justify-between mt-2">
+                    <div>
+                        <input type="checkbox" id="average-filter" value="average-filter">
+                        <label for="average-filter">Média Ponderada</label>
+                    </div>
+                    <button id="toggle-all" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105">
+                        Selecionar Todas / Nenhuma
+                    </button>
+                </div>
 
             </section>
 
