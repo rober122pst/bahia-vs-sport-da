@@ -11,44 +11,45 @@ A pontuação atribuída a cada clube em cada ano seguiu a seguinte lógica:
 
 > 🧮 **Os pesos de pontuação foram definidos com auxílio do ChatGPT**, com o objetivo de garantir uma abordagem imparcial, balanceada e baseada em lógica competitiva, considerando o impacto esportivo de cada feito.
 
-### Competições Nacionais
+### 📌 Torneios de Liga (Pontos Corridos)
+- **Campeão**: 120 pontos  
+- **Vice**: 95  
+- **3º**: 70  
+- **4º**: 60  
+- **Top 6**: 50  
+- **Top 8**: 40  
+- **Top 10**: 30  
+- **Top 14**: 20  
+- **Abaixo na tabela**: 10  
+- **Rebaixado**: -200
 
-* **Título Nacional (Série A ou Copa do Brasil)**: +10 pontos
-* **Vice Nacional**: +8 pontos
-* **Top 4 Nacional**: +6 pontos
-* **Top 10 da Série A**: +5 pontos
-* **Participar da Série A**: +2 pontos
-* **Acesso (subiu de divisão)**: +4 pontos
-* **Rebaixamento**: -4 pontos
-* **Rebaixamento na Série B**: -6 pontos
+*Para a Série B, todos os promovidos exceto o campeão ganham 70 pontos.*
 
-### Competições Regionais
+### ⚔️ Torneios de Mata-Mata  
+*(Copa do Brasil, Copa do Nordeste, Libertadores, etc.)*  
+- **Campeão**: 120  
+- **Vice**: 95  
+- **Semi**: 65  
+- **Quartas**: 40  
+- **Oitavas**: 30  
+- **Terceira fase**: 20  
+- **Eliminado na 1ª ou 2ª fase**: 10
 
-* **Título da Copa do Nordeste**: +4 pontos
-* **Vice da Copa do Nordeste**: +3 pontos
-* **Semifinal da Copa do Nordeste**: +2 pontos
-* **Título Estadual**: +3 pontos
-* **Vice Estadual**: +1 ponto
+*Estadual só pontua na final e Copa do Nordeste a partir das Semis.*
 
-### Competições Internacionais
+### Pesos por competição
 
-* **Participou da Libertadores**: +3 pontos
-
-* **Chegou às Oitavas**: +5 pontos
-
-* **Chegou às Quartas**: +6 pontos
-
-* **Participou da Sul-Americana**: +1 ponto
-
-* **Chegou às Oitavas da Sula**: +2 pontos
-
-* **Chegou às Quartas da Sula**: +3 pontos
-
-### Bonificações Especiais
-
-* **Campanha superior no Brasileirão (mesma divisão)**: +2 pontos  *(Não cumulativa com Top 10, Top 4, Vice ou Título, mas cumulativa com participação)*
-* **Campanha próxima, mas superior no Brasileirão (mesma divisão)**: +1 ponto
-* **Campanha superior na Copa do Brasil**: +1 ponto
+| Competição        | Peso |
+| ----------------- | ---- |
+| Estadual          | 1    |
+| Copa do Nordeste  | 2    |
+| Copa dos Campeões | 3    |
+| Série C           | 0.5  |
+| Série B           | 2    |
+| Série A           | 5    |
+| Copa do Brasil    | 4    |
+| Sul-Americana     | 4    |
+| Libertadores      | 7    |
 
 ## Objetivos do Projeto
 
@@ -56,24 +57,16 @@ A pontuação atribuída a cada clube em cada ano seguiu a seguinte lógica:
 * Calcular um placar acumulado com base nos critérios estabelecidos.
 * Identificar padrões, evoluções ou declínios ao longo do tempo.
 * Oferecer uma base objetiva para debates entre torcedores e entusiastas do futebol nordestino.
-
-## Estrutura do Repositório
-
-* `SportVsBahia.ipynb`: Notebook principal contendo toda a lógica de cálculo, análise e visualizações dos dados.
-* `SportVSBahia.py`: Mesma coisa que o notebook, porém em .py para quem preferir.
-* `sportVSbahia.yaml`: Arquivo com todas as temporadas de 1987 a 2022, contendo:
-
-  * Pontuação total de cada clube no ano
-  * Pontuação separada por competição
-  * Breve comentário explicando a justificativa da pontuação
-* `README.md`: Este arquivo de explicação geral do projeto.
+* O principal objetivo do projeto foi para ganhar uma discussão.
 
 ## Como Executar
+
+Você pode acessar ao [site](https://rober122pst.github.io/bahia-vs-sport-da/site/) ou seguir os passos a seguir:
 
 1. Clone este repositório:
 
    ```bash
-   git clone https://github.com/seu-usuario/SportVsBahia.git
+   git clone https://github.com/rober122pst/bahia-vs-sport-da.git
    ```
 2. Abra o notebook `SportVsBahia.ipynb` em seu ambiente Jupyter preferido.
 3. Execute as células para gerar as visualizações e placares.
@@ -97,3 +90,4 @@ As informações sobre os desempenhos dos clubes foram obtidas a partir das segu
 ## Observações Finais
 
 Este projeto é uma análise quantitativa com base em critérios definidos previamente. Apesar de haver um certo grau de subjetividade na escolha dos pesos de pontuação, o objetivo é fomentar uma discussão saudável e divertida sobre os maiores clubes do Nordeste. Dito isso, Sport Recife maior clube do nordeste.
+
