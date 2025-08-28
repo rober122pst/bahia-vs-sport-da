@@ -21,7 +21,7 @@ A pontuação atribuída a cada clube em cada ano seguiu a seguinte lógica:
 - **Top 10**: 30  
 - **Top 14**: 20  
 - **Abaixo na tabela**: 10  
-- **Rebaixado**: -200
+- **Rebaixado**: -200 (é dividido pelo peso)
 
 *Para a Série B, todos os promovidos exceto o campeão ganham 70 pontos.*
 
@@ -90,4 +90,5 @@ As informações sobre os desempenhos dos clubes foram obtidas a partir das segu
 ## Observações Finais
 
 Este projeto é uma análise quantitativa com base em critérios definidos previamente. Apesar de haver um certo grau de subjetividade na escolha dos pesos de pontuação, o objetivo é fomentar uma discussão saudável e divertida sobre os maiores clubes do Nordeste. Dito isso, Sport Recife maior clube do nordeste.
+
 
